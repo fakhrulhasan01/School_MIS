@@ -1,0 +1,18 @@
+teacher login:
+link:http://localhost/finalschoolproject/teacherlogin/
+username:15001
+password:123456
+
+student login:
+username:1114
+password:123456
+
+account login:
+http://localhost/finalschoolproject/accountlogin/
+username:15001
+password:123456
+
+teacher login:
+http://localhost/finalschoolproject/adminlogin/
+username:15001
+password:123456

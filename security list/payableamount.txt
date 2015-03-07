@@ -1,0 +1,11 @@
+create table payableamount(
+    id int (10) not null auto_increment,
+    classid int (10) not null,
+    amounttypeid int (10) not null,
+    yearid int (10) not null,
+    amount varchar (10) not null,
+    primary key (id),
+    foreign key (classid) references class (id),
+    foreign key (amounttypeid) references amounttype (id),
+    foreign key (yearid) references year (id)
+    );

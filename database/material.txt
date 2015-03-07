@@ -1,0 +1,9 @@
+create table classmaterial(
+id int (10) not null auto_increment,
+classmaterialtypeid int (10) not null,
+classattendence varchar (20) not null,
+teacherid int (10) not null,
+primary key (id),
+foreign key (teacherid) references teacher (id) on delete cascade,
+foreign key (classmaterialtypeid) references classmaterialtype (id) on delete cascade
+);

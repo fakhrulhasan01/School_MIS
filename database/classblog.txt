@@ -1,0 +1,10 @@
+create table classblog(
+id int (10) auto_increment not null,
+studentid int (10)  null,
+teacherid int (10)  null,
+classid int (10) not null,
+description varchar (40) not null,
+cdate timestamp,
+primary key (id),
+constraint cb_fk_cid foreign key (classid) references class(id) on delete cascade
+);

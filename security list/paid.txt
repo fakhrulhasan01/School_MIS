@@ -1,0 +1,12 @@
+create table paidamount(
+    id int (10) not null auto_increment,
+    userid int (10) not null,
+    classid int (10) not null,
+    amounttypeid int (10) not null,
+    date date,
+    amount varchar (10) not null,
+    primary key (id),
+    foreign key (userid) references student (userid),
+    foreign key (classid) references payableamount (classid),
+    foreign key (amounttypeid) references amounttype (id)
+    );

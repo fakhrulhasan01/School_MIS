@@ -1,0 +1,11 @@
+create table studentCourse(
+studentid int(10) not null,
+courseid int(10) not null,
+yearid int(10) not null,
+teacherid int(10) not null, 
+primary key(studentid,courseid,yearid ),
+foreign key (studentid) references student(id) on delete cascade,
+foreign key (courseid) references course(id) on delete cascade,
+foreign key (yearid) references year(id) on delete cascade,
+foreign key (teacherid) references teacher(id) on delete cascade
+);

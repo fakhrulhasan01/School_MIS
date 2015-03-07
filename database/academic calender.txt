@@ -1,0 +1,9 @@
+create table academic_calender(
+id int (10) not null,
+lessionplan varchar (30) not null,
+syllabus varchar (30) not null,
+booklist varchar (30) not null,
+studyture varchar (30) not null,
+sportday varchar (30) not null,
+primary key (id)
+);

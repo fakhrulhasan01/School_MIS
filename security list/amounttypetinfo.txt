@@ -1,0 +1,5 @@
+create table amounttypetinfo(
+    id int (10) not null auto_increment,
+    name int (10) not null,
+    primary key (id)
+   );

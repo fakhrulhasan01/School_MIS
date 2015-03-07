@@ -1,0 +1,8 @@
+create table blog(
+id int (10) not null auto_increment,
+studentid int (10)  null,
+teacherid int (10)  null,
+comment varchar (20) not null,
+cdate timestamp,
+primary key (id)
+);

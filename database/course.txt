@@ -1,0 +1,7 @@
+create table course(
+id int (10) auto_increment not null,
+name varchar (25) not null,
+classid int (10) not null,
+constraint pk_course_id primary key (id),
+constraint fk_class_id foreign key (classid) references class (id) on delete cascade
+);

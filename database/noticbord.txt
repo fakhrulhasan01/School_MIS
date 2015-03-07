@@ -1,0 +1,7 @@
+create table noticbord(
+id int (10) not null auto_increment,
+noticname varchar (20) not null,
+description varchar (30) not null,
+descriptionfile varchar (30) not null,
+primary key (id)
+);

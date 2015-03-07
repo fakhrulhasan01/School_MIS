@@ -1,0 +1,9 @@
+create table assigningteacher(
+id int (10) auto_increment not null,
+classid int (10) not null,
+teacherid int not null,
+primary key (id),
+    foreign key (classid) references class(id),
+    foreign key (teacherid) references teacher (teacherid)
+
+);

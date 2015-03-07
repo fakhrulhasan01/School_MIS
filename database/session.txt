@@ -1,0 +1,5 @@
+create table session(
+id int (10) auto_increment not null,
+name varchar (25) not null,
+constraint pk_session_id primary key (id)
+);

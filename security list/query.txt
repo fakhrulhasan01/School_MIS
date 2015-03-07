@@ -1,0 +1,10 @@
+select paid.userid,sum(paid.amount),(select pay.classid,sum(pay.amount)from payableamount as pay group by pay.classid) from paidamount as paid ,student as s
+    where
+    s.userid=paid.userid
+    group by paid.userid
+     
+     
+     select pay.classid,sum(pay.amount)from payableamount as pay group by pay.classid
+     
+     
+     

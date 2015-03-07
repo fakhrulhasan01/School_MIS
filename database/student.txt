@@ -1,0 +1,16 @@
+create table student(
+id int (10) auto_increment not null,
+name varchar (25) not null,
+picture varchar (40) not null,
+gender varchar (5) not null,
+email varchar (20) not null,
+password varchar (20) not null,
+fname varchar (30) not null,
+mname varchar (30) not null,
+paddress varchar (20) not null,
+peraddress varchar (20) not null,
+mobileno varchar (20) not null,
+studentid int (10) not null,
+constraint pk_student_id primary key (id),
+constraint unique_key_student unique key (studentid)
+);

@@ -1,0 +1,10 @@
+create table iqtest(
+id int (10) auto_increment not null,
+question varchar (25) not null,
+answer1 varchar (25) not null,
+answer2 varchar (25) not null,
+answer3 varchar (25) not null,
+answer4 varchar (25) not null,
+canswer varchar (25) not null,
+primary key (id)
+);

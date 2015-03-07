@@ -1,0 +1,7 @@
+create table photogallary(
+id int (10) not null auto_increment,
+name varchar (20) not null,
+picture varchar (10) not null,
+pic_type varchar (5) not null,
+primary key (id)
+);

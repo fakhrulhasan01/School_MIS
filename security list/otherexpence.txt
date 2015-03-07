@@ -1,0 +1,33 @@
+create table otherexpence(
+    id int (10) not null auto_increment,
+    amount varchar (10)not null,
+    expencerison varchar (30) not null,
+    monthid int (10)not null,
+    dayid int (10)not null,
+    yearid int (10)not null,
+    primary key (id),
+    foreign key (monthid) references month(id),
+    foreign key (dayid) references day(id),
+    foreign key (yearid) references year(id)
+    );
+
+
+create table otherearn(
+    id int (10) not null auto_increment,
+    amount varchar (10)not null,
+    earnsorce varchar (30) not null,
+    monthid int (10)not null,
+    dayid int (10)not null,
+    yearid int (10)not null,
+    primary key (id),
+    foreign key (monthid) references month(id),
+    foreign key (dayid) references day(id),
+    foreign key (yearid) references year(id)
+    );
+
+
+create table day(
+    id int (10) not null auto_increment,
+    name varchar (10)not null,
+    primary key (id)
+    );

@@ -1,0 +1,19 @@
+create table attendence(
+    id int (10) not null auto_increment,
+    studentid int (10) not null,
+    classid int (10) not null,
+    yearid int (10) not null,
+    teacherid int (10) not null,
+    sectionid int (10) not null,
+    shiftid int (10) not null,
+    present varchar (5) not null,
+    absent varchar (5) not null,
+    date varchar (20) not null,
+    
+    primary key (id),
+    foreign key (studentid) references student(studentid),
+    foreign key (teacherid) references teacher(teacherid),
+    foreign key (sectionid) references section(id),
+    foreign key (yearid) references year(id),
+    foreign key (shiftid) references shift(id)
+    );

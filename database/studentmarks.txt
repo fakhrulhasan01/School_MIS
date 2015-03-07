@@ -1,0 +1,16 @@
+create table studentMarks(
+studentid int not null,
+courseid int not null,
+sessionid int not null,
+yearid int not null,
+marks float not null,
+
+
+
+primary key(studentid, sessionid, yearid),
+
+foreign key (studentid) references student(id),
+foreign key (courseid) references course(id),
+foreign key (sessionid) references session(id),
+foreign key (yearid) references year(id)
+);

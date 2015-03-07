@@ -1,0 +1,23 @@
+create table paidamount(
+    id int (10) not null auto_increment,
+    studentid int (10) not null,
+    classid int (10) not null,
+    dayid int (10) not null,
+    monthid int (10) not null,
+    yearid int (10) not null,
+    shiftid int (10) not null,
+    sectionid int (10) not null,
+    payorpaidamounttypeid int (10) not null,
+    amount varchar (10) not null,
+    slno varchar (10) not null,
+    primary key (id),
+    unique key (slno),
+    foreign key (studentid) references student (studentid),
+    foreign key (classid) references class (id),
+    foreign key (dayid) references day (id),
+    foreign key (monthid) references month (id),
+    foreign key (yearid) references year (id),
+    foreign key (shiftid) references shift (id),
+    foreign key (sectionid) references section (id),
+    foreign key (payorpaidamounttypeid) references payorpaidamounttype (id)
+    );

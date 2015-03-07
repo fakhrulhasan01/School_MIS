@@ -1,0 +1,12 @@
+create table teacheraccountinfo(
+    id int (10) not null auto_increment,
+    teacherinfoid int (10) not null,
+    paidamount varchar (10) not null,
+    typeteacherid int (10) not null,
+    day varchar (10) not null,
+    month varchar (10) not null,
+    year varchar (10) not null,
+    primary key(id),
+    foreign key (teacherinfoid) references teacher(teacherid),
+    foreign key (typeteacherid) references typeteacher(id)
+    );

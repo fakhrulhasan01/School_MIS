@@ -1,0 +1,46 @@
+create table class(
+id int (10) auto_increment not null,
+name varchar (25) not null,
+primary key (id)
+);
+
+
+
+qUERY oNE:
+
+select class.name, student.name, year.name from student, class, course, studentcourse, year where 
+studentcourse.studentid = student.id 
+and studentcourse.courseid = course.id and course.classid = class.id 
+and studentcourse.yearid = year.id
+and year.id = '2'
+
+
+
+QUERY TWO:
+
+SELECT class.name, course.name, student.name, year.name
+FROM student, class, course, studentcourse, year
+WHERE studentcourse.studentid = student.id
+AND studentcourse.courseid = course.id
+AND course.classid = class.id
+AND studentcourse.yearid = year.id
+AND (
+(
+STUDENTCOURSE.COURSEID = '4'
+) || ( STUDENTCOURSE.COURSEID = '8' )
+)
+
+
+
+select class.name, student.name, year.name from student, class, course, studentMARKS, SESSION, year where 
+studentMARKS.studentid = student.id 
+and studentMARKS.courseid = course.id and course.classid = class.id 
+and studentMARKS.yearid = year.id AND studentMARKS.SESSIONID = SESSION.ID
+
+
+
+select class.name, COURSE.NAME, STUDENTMARKS.MARKS, year.name from student, class, course, studentMARKS, SESSION, year where 
+studentMARKS.studentid = student.id 
+and studentMARKS.courseid = course.id and course.classid = class.id 
+and studentMARKS.yearid = year.id AND studentMARKS.SESSIONID = SESSION.ID
+

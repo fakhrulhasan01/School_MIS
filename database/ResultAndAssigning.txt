@@ -1,0 +1,84 @@
+,<
+http://www.youtube.com/watch?v=XjjpwCecfhw
+http://www.youtube.com/watch?v=CGMpj-hfflM
+http://www.dailymotion.com/video/x29eli5_ajax-vs-barcelona-0-2-full-highlights-05-11-2014-champions-league-hd_sport
+
+
+create table orders(
+    ordersid int (10) not null auto_increment,
+    customerid int (10) not null,
+    productid int (10) not null,
+    salemanid int (10) not null,
+    quentity varchar (10) not null,
+    size varchar (10) not null,
+    price varchar (10) not null,
+    orderdate varchar (15) not null,
+    delevarydate varchar (15) not null,
+    status varchar (5) not null,
+    paidamount varchar (20) not null,
+    dueamount varchar (20) not null,
+    
+    primary key (ordersid),
+    foreign key (customerid) references customer(customerid),
+    foreign key (productid) references product(productid),
+    foreign key (salemanid) references saleman(salemanid)
+    );
+
+
+
+
+create table cno(
+    cnoid int (10) not null auto_increment
+    date varchar (15) not null 
+    ordersid int (10) not null
+    salemanid int (10) not null
+    oequentity varchar (10) not null
+    cequentity varchar (10) not null
+    
+    primary key (cnoid)
+    foreign key (orderid) references orders()
+
+create table assigningclassforstudent(
+    studentid int (10) not null,
+    classid int (10) not null,
+    classroll int (10) not null,
+    yearid int (10) not null,
+    sectionid int (10) not null,
+    shiftid int (10) not null,
+    teacherid int (10) not null,
+    
+    primary key (studentid, classid, yearid,shiftid,sectionid),
+    foreign key (studentid) references student(studentid),
+    foreign key (classid) references class(id),
+    foreign key (yearid) references year(id),
+    foreign key (sectionid) references section(id),
+    foreign key (shiftid) references shift(id),
+    foreign key (teacherid) references teacher(id)
+    );
+    
+create table result(
+    studentid int (10) not null,
+    classid int (10) not null,
+    subjectid int (10) not null,
+    yearid int (10) not null,
+    teacherid int (10) not null,
+    sectionid int (10) not null,
+    shiftid int (10) not null,
+    fullmarks varchar (10) not null,
+    MidSubjectivemarks varchar(10) not null,
+    MidObjectivemarks varchar(10) not null,
+    firsttutorial varchar(5) not null,
+    secondtutorial varchar(5) not null,
+    FinalSubjectivemarks varchar(10) not null,
+    FinalObjectivemarks varchar(10) not null,
+    thirdtutorial varchar(10) not null,
+    fourthtutorial varchar(10) not null,
+    primary key (studentid, classid, yearid,subjectid),
+    foreign key (studentid, classid, yearid,shiftid,sectionid) references assigningclassforstudent
+    (studentid,classid,yearid,shiftid,sectionid),
+    foreign key (subjectid) references subject(id),
+    foreign key (teacherid) references teacher(teacherid),
+    foreign key (sectionid) references section(id),
+    foreign key (yearid) references year(id),
+    foreign key (shiftid) references shift(id)
+    );
